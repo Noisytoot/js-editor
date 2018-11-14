@@ -1,0 +1,38 @@
+doctype html
+html
+    head
+        title JavaScript Editor
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(name="theme-color" content="1abc9c")
+        link(rel="icon" type="image/png" href="icon50.png")
+        link(rel="icon" type="image/png" href="icon100.png")
+        link(rel="icon" type="image/png" href="icon500.png")
+        link(rel="stylesheet" href="style.css")
+        script(src="jshint.js")
+        // Materialize:
+        link(rel="stylesheet" href="materialize.min.css")
+        script(src="materialize.min.js")
+        // CodeMirror:
+        link(rel="stylesheet" type="text/css" href="lib/codemirror.css")
+        script(type="text/javascript" src="lib/codemirror.js")
+        script(type="text/javascript" src="mode/javascript/javascript.js")
+        link(rel="stylesheet" type="text/css" href="theme/material.css")
+        script(src="addon/search/search.js")
+        script(src="addon/search/searchcursor.js")
+        script(src="addon/search/jump-to-line.js")
+        script(src="addon/dialog/dialog.js")
+        link(rel="stylesheet" href="addon/dialog/dialog.css")
+        script(src="addon/lint/lint.js")
+        script(src="addon/lint/javascript-lint.js")
+        link(rel="stylesheet" href="addon/lint/lint.css")
+    body
+        noscript
+            h1(style="font-family: 'Roboto Mono', monospace; color: red;") You need JavaScript
+        #title
+            h1 JavaScript Editor
+            a(class="waves-effect waves-light btn" onclick="help();") Help
+        #evalBox
+        #runButtonWrapper
+            a(class="waves-effect waves-light btn-large" onclick="evalInput();") Run
+                i(class="material-icons right") play_arrow
+        script(src="editor.js")
