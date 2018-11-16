@@ -1,13 +1,18 @@
+@font: 'Roboto Mono', monospace;
+@font-format: 'woff2';
+@padding: 10px;
+
 @font-face {
-  font-family: 'Roboto Mono', monospace;
-  src: url('RobotoMono.woff2') format('woff2');
+    font-family: @font;
+    src: url('RobotoMono.woff2') format(@font-format);
 }
+
 /* Material Icons */
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: url('material-icons.woff2') format('woff2');
+  src: url('material-icons.woff2') format(@font-format);
 }
 .material-icons {
   font-family: 'Material Icons';
@@ -24,17 +29,18 @@
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
 }
-.CodeMirror,
-#evalBox {
-  font-family: 'Roboto Mono', monospace;
-  padding: 10px;
-  height: auto;
+
+.CodeMirror, #evalBox {
+    font-family: @font;
+    padding: @padding;
+    height: auto;
 }
-#runButtonWrapper,
-#title {
-  font-family: 'Roboto Mono', monospace;
-  text-align: center;
+
+#runButtonWrapper, #title {
+    font-family: @font;
+    text-align: center;
 }
+
 #runButtonWrapper {
-  padding: 10px;
+    padding: @padding;
 }
