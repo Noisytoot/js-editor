@@ -9,7 +9,7 @@
 .padding {
     padding: @padding;
 }
-.border-radius (@radius: 5px) {
+.border-radius (@radius: @border-radius) {
     -webkit-border-radius: @radius;
     -moz-border-radius: @radius;
     border-radius: @radius;
@@ -48,7 +48,7 @@
 .CodeMirror, #evalBox {
     font-family: @font;
     height: auto;
-    .border-radius(@border-radius);
+    .border-radius;
 }
 
 #runButtonWrapper, #title {
