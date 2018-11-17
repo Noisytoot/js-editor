@@ -1,8 +1,10 @@
+.padding {
+  padding: 10px;
+}
 @font-face {
   font-family: 'Roboto Mono', monospace;
   src: url('RobotoMono.woff2') format('woff2'), url('RobotoMono.woff') format('woff');
 }
-/* Material Icons */
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -27,7 +29,6 @@
 .CodeMirror,
 #evalBox {
   font-family: 'Roboto Mono', monospace;
-  padding: 10px;
   height: auto;
 }
 #runButtonWrapper,
@@ -35,6 +36,8 @@
   font-family: 'Roboto Mono', monospace;
   text-align: center;
 }
-#runButtonWrapper {
+#runButtonWrapper,
+.CodeMirror,
+#evalBox {
   padding: 10px;
 }

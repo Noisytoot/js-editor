@@ -2,6 +2,9 @@
 @woff2: format('woff2');
 @woff: format('woff');
 @padding: 10px;
+.padding {
+    padding: @padding;
+}
 
 @font-face {
     font-family: @font;
@@ -9,7 +12,7 @@
          url('RobotoMono.woff') @woff;
 }
 
-/* Material Icons */
+// Material Icons
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -35,7 +38,6 @@
 
 .CodeMirror, #evalBox {
     font-family: @font;
-    padding: @padding;
     height: auto;
 }
 
@@ -44,6 +46,6 @@
     text-align: center;
 }
 
-#runButtonWrapper {
-    padding: @padding;
+#runButtonWrapper, .CodeMirror, #evalBox {
+    .padding;
 }
