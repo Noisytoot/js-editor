@@ -30,6 +30,9 @@
 #evalBox {
   font-family: 'Roboto Mono', monospace;
   height: auto;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
 }
 #runButtonWrapper,
 #title {

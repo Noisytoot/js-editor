@@ -1,9 +1,18 @@
+// Variables
 @font: 'Roboto Mono', monospace;
 @woff2: format('woff2');
 @woff: format('woff');
 @padding: 10px;
+@border-radius: 15px;
+
+// Mixins
 .padding {
     padding: @padding;
+}
+.border-radius (@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
 }
 
 @font-face {
@@ -39,6 +48,7 @@
 .CodeMirror, #evalBox {
     font-family: @font;
     height: auto;
+    .border-radius(@border-radius);
 }
 
 #runButtonWrapper, #title {
