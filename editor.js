@@ -1,4 +1,4 @@
-var editor = CodeMirror(document.getElementById("evalBox"), {
+let editor = CodeMirror(document.getElementById("evalBox"), {
     lineNumbers: true,
     mode: "javascript",
     theme: "material",
@@ -10,11 +10,11 @@ var editor = CodeMirror(document.getElementById("evalBox"), {
 editor.setValue("/*jshint esversion: 6 */");
 
 function evalInput() {
-    var code = editor.getValue();
+    let code = editor.getValue();
     eval(code);
 }
 
-var version = "v1.0.0";
+let version = "v1.0.0";
 function help() {
     alert(`JavaScript editor ${version}
     Type JavaScript in the box
@@ -27,8 +27,8 @@ function help() {
 
 // Indentation:
 editor.setOption("extraKeys", {
-    Tab: function(cm) {
-        var spaces = Array(cm.getOption("indentUnit") + 1).join(" ");
+    Tab: (cm) => {
+        let spaces = Array(cm.getOption("indentUnit") + 1).join(" ");
         cm.replaceSelection(spaces);
     }
 });
